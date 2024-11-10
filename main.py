@@ -1,10 +1,8 @@
 import pygame
-
 from asteroid import Asteroid
 from constants import *
 from player import Player
 from asteroidfield import AsteroidField
-
 
 def main():
     pygame.init()
