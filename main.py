@@ -27,7 +27,7 @@ def main():
     Shot.containers = (shots, updatable, drawable)
 
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
-    asteroidfield = AsteroidField()
+    asteroid_field = AsteroidField()
 
 
     while True:
@@ -50,6 +50,10 @@ def main():
             if player.collide(asteroid):
                 print("Game over!")
                 sys.exit()
+
+            for shot in shots:
+                if asteroid.collide(shot):
+                    asteroid.kill()
 
 if __name__ == "__main__":
     main()
