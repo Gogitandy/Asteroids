@@ -45,6 +45,7 @@ def main():
 
         pygame.display.flip()
         dt = (game_clock.tick(60) / 1000)
+        player.shoot_timer -= dt
 
         for asteroid in asteroids:
             if player.collide(asteroid):
